@@ -8,9 +8,12 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-  # Messages | Action: Index | Default URL: ("/")
+  # Messages | Method: GET | Action: Index | Default URL: ("/")
   get "messages", to: "messages#index"
 
-  # Messages | Action: New | URL: ("/messages/new")
+  # Messages | Method: GET | Action: New | URL: ("/messages/new")
   get "messages/new", to: "messages#new"
+
+  # Messages | Method: POST | Action: Create | URL: ("/messages/create")
+  post 'messages', to: 'messages#create'
 end
