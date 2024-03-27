@@ -8,4 +8,9 @@ class MessagesController < ApplicationController
   def new
     @message = Message.new
   end
+
+  private
+    def message_params
+      params.require(:message).permit(:content)
+    end
 end
