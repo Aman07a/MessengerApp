@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   get "messages/new", to: "messages#new"
 
   # Messages | Method: POST | Action: Create | URL: ("/messages/create")
-  post 'messages', to: 'messages#create'
+  post "messages", to: "messages#create"
 end
